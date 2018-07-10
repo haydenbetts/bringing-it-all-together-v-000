@@ -47,9 +47,8 @@ class Dog
       return self
     else
       sql = <<-SQL
-        INSERT INTO dogs
-        SET name = ?, breed = ?
-        WHERE id = ?
+        INSERT INTO dogs (name, breed)
+        VALUES (?, ?)
       SQL
       DB[:conn].execute(sql, self.name, self.breed, self.id)
   end
