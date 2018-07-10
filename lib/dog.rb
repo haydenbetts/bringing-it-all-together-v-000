@@ -18,7 +18,7 @@ class Dog
 
   def self.drop_table
     sql = <<-SQL
-      CREATE TABLE dogs (
+      DROP TABLE dogs (
         id INTEGER PRIMARY KEY,
         name TEXT,
         breed TEXT
