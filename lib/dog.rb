@@ -13,7 +13,7 @@ class Dog
       );
     SQL
 
-    db[:conn].execute(sql)
+    DB[:conn].execute(sql)
   end
 
   def self.drop_table
@@ -21,7 +21,7 @@ class Dog
       DROP TABLE dogs;
     SQL
 
-    db[:conn].execute(sql)
+    DB[:conn].execute(sql)
   end
 
   def self.new_from_db(row)
