@@ -39,7 +39,7 @@ class Dog
       FROM dogs
       WHERE id = ?
     SQL
-    DB[:conn].execute(sql, id)
+    row = DB[:conn].execute(sql, id)
   end
 
   def update
