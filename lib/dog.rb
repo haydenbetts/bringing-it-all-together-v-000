@@ -5,7 +5,8 @@ class Dog
   end
 
   def self.create_table
-    # creates dogs
+    sql = <<-SQL
+    SQL
   end
 
   def self.drop_table
