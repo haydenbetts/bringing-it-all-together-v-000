@@ -56,7 +56,8 @@ class Dog
     end
   end
 
-  def create(attributes)
+  def self.create(name:, breed:, id: nil)
+    dog = self.new(name, breed, id)
   end
 
 end
