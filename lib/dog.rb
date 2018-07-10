@@ -12,7 +12,8 @@ class Dog
     # drops dogs
   end
 
-  def
+  def self.new_from_db
+    # creates and returns new dog instance from database row
   end
 
 end
