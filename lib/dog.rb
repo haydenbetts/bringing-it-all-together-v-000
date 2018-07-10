@@ -51,6 +51,7 @@ class Dog
         VALUES (?, ?)
       SQL
       DB[:conn].execute(sql, self.name, self.breed)
+      self.id = DB[:conn].execute("SELECT MAX(id) FROM dogs")
   end
 
 end
