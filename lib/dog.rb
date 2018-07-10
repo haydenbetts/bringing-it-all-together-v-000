@@ -25,20 +25,6 @@ class Dog
     DB[:conn].execute(sql)
   end
 
-  def self.new_from_db(row)
-    self.create(name: row[1], breed: row[2], id: row[0])
-  end
-
-  def self.find_by_name(name)
-    sql = <<-SQL
-      SELECT *
-      FROM dogs
-      WHERE name = ?
-    SQL
-    row = DB[:conn].execute(sql, id)[0]
-    self.new_from_db(row)
-  end
-
   def self.find_by_id(id)
     sql = <<-SQL
       SELECT *
@@ -76,6 +62,20 @@ class Dog
   def self.create(name:, breed:, id: nil)
     dog = self.new(name: name, breed: breed, id: id)
     dog.save
+  end
+
+  def self.new_from_db(row)
+    self.create(name: row[1], breed: row[2], id: row[0])
+  end
+
+  def self.find_by_name(name)
+    sql = <<-SQL
+      SELECT *
+      FROM dogs
+      WHERE name = ?
+    SQL
+    row = DB[:conn].execute(sql, id)[0]
+    self.new_from_db(row)
   end
 
 end
