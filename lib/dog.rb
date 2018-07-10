@@ -25,6 +25,9 @@ class Dog
   end
 
   def save
+    # if row representing this instance already exists, update it
+    # if not insert instance attributes into new row
+    # then set id for this
   end
 
 end
