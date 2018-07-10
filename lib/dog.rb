@@ -34,7 +34,9 @@ class Dog
 
   def update
     sql = <<-SQL
-    
+      UPDATE dogs
+      SET name = ?, breed = ?
+      WHERE id = ?
     SQL
     # updates row attributes to attributes of current instance
   end
