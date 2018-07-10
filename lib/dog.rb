@@ -91,6 +91,7 @@ class Dog
       self.new_from_db(row)
     else
       self.create(name: name, breed: breed)
+    end
   end
 
 end
