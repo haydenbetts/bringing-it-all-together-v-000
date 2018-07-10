@@ -38,7 +38,7 @@ class Dog
       SET name = ?, breed = ?
       WHERE id = ?
     SQL
-    # updates row attributes to attributes of current instance
+    DB[:conn].execute(sql)
   end
 
   def save
