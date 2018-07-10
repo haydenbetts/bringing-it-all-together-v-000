@@ -42,9 +42,16 @@ class Dog
   end
 
   def save
-    # if row representing this instance already exists, update it
-    # if not insert instance attributes into new row
-    # then set id for this
+    if self.id
+      update
+      self
+    else
+      sql = <<-SQL
+        UPDATE dogs
+        SET name = ?, breed = ?
+        WHERE id = ?
+      SQL
+      DB[:conn].execute(sql, self.name, self.breed, self.id)
   end
 
 end
