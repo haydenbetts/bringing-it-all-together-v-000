@@ -3,5 +3,8 @@ class Dog
   def initialize(name:, breed:, id: nil)
     self.name, self.breed, self.id = name, breed, id
   end
-  
+
+  def self.create_table
+  end
+
 end
