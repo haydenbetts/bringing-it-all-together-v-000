@@ -88,7 +88,7 @@ class Dog
     binding.pry
     row = DB[:conn].execute(sql, name, breed)[0]
 
-    if row != []
+    if row
       self.new_from_db(row)
     else
       self.create(name: name, breed: breed)
