@@ -85,7 +85,6 @@ class Dog
       WHERE name = ? AND breed = ?
     SQL
 
-    binding.pry
     row = DB[:conn].execute(sql, name, breed)[0]
 
     if row
