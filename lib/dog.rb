@@ -21,6 +21,7 @@ class Dog
   end
 
   def update
+    # updates row attributes to attributes of current instance
   end
 
   def save
