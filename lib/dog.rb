@@ -89,8 +89,8 @@ class Dog
 
     if row != []
       self.new_from_db(row)
-
-    if self.find_by_name || self.find_by_breed
+    else
+      self.create(name: name, breed: breed)
   end
 
 end
