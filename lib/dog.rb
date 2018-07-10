@@ -5,10 +5,14 @@ class Dog
   end
 
   def self.create_table
-    
+    # creates dogs
   end
 
   def self.drop_table
+    # drops dogs
+  end
+
+  def
   end
 
 end
