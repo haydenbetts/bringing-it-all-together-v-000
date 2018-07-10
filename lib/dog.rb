@@ -17,7 +17,15 @@ class Dog
   end
 
   def self.drop_table
-    # drops dogs
+    sql = <<-SQL
+      CREATE TABLE dogs (
+        id INTEGER PRIMARY KEY,
+        name TEXT,
+        breed TEXT
+      );
+    SQL
+
+    db[:conn].execute(sql)
   end
 
   def self.new_from_db(row)
