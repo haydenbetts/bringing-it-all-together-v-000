@@ -33,6 +33,9 @@ class Dog
   end
 
   def update
+    sql = <<-SQL
+    
+    SQL
     # updates row attributes to attributes of current instance
   end
 
