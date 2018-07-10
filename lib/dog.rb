@@ -33,6 +33,9 @@ class Dog
     # returns dog instance with that name
   end
 
+  def self.find_by_id(name)
+  end
+
   def update
     sql = <<-SQL
       UPDATE dogs
