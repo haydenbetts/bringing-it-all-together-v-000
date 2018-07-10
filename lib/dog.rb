@@ -44,10 +44,10 @@ class Dog
   def save
     if self.id
       update
-      self
+      return self
     else
       sql = <<-SQL
-        UPDATE dogs
+        INSERT INTO dogs
         SET name = ?, breed = ?
         WHERE id = ?
       SQL
