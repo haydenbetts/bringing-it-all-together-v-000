@@ -71,7 +71,6 @@ describe "Dog" do
 
   describe ".create" do
     it 'takes in a hash of attributes and uses metaprogramming to create a new dog object. Then it uses the #save method to save that dog to the database'do
-      binding.pry
       Dog.create(name: "Ralph", breed: "lab")
       expect(DB[:conn].execute("SELECT * FROM dogs")).to eq([[1, "Ralph", "lab"]])
     end
